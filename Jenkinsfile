@@ -11,7 +11,7 @@ pipeline {
 
         stage('Run Container') {
             steps {
-                sh "docker -d -p 8686:8080 tomcatwebapp:${env.BUILD_ID}"
+                sh "docker run -d -p 8686:8080 tomcatwebapp:${env.BUILD_ID}"
             }
         }
     }
